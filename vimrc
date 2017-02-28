@@ -25,7 +25,7 @@ set formatoptions-=t
 " Highlight characters past re-wrap column width as warning
 augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermbg=1
-  autocmd BufEnter * match OverLength /\%81v.*/
+  autocmd BufEnter * match OverLength /\%82v.*/
 augroup END
 
 " Indent settings
