@@ -1,2 +1,2 @@
 # My-Vim-Config
-My first attempt at vim.
+My current vim-setup.
