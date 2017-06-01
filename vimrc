@@ -5,8 +5,10 @@ filetype on
 " Enables syntax highlighting 
 syntax on
 
-set t_Co=256
-colorscheme diokai-zen
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+colorscheme truesight
 
 " Relative line numbers
 set rnu
@@ -25,11 +27,6 @@ set textwidth=80
 " Disable auto-wrap
 set wrapmargin=0
 set formatoptions-=t
-" Highlight characters past re-wrap column width as warning
-" augroup vimrc_autocmds
-"   autocmd BufEnter * highlight OverLength ctermbg=1
-"   autocmd BufEnter * match OverLength /\%82v.*/
-" augroup END
 
 " Indent settings
 filetype indent on
@@ -46,6 +43,7 @@ set scrolloff=5
 augroup reload_vimrc " {
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd BufWritePost $HOME/.vim/colors/truesight.vim source $MYVIMRC
 augroup END " }
 
 " Plugins via vim-plug
