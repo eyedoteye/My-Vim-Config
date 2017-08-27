@@ -5,10 +5,16 @@ filetype on
 " Enables syntax highlighting 
 syntax on
 
+" 24Bit Theme
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 colorscheme truesight
+
+" Show Highlight Group
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " Relative line numbers
 set rnu
@@ -51,5 +57,8 @@ call plug#begin('~/.vim/plugged')
 
 " GLSL Syntax Highlighting
 Plug 'https://github.com/tikhomirov/vim-glsl'
+
+" Scope Lines
+Plug 'https://github.com/nathanaelkane/vim-indent-guides'
 
 call plug#end()

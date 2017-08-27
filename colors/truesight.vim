@@ -26,6 +26,9 @@ hi Identifier   guifg=#cececf
 " html [embeded javascript]
 hi javaScript   guifg=#cececf   guibg=#1c1c1c
 
+" javascript
+hi javaScriptValue  guifg=#cd3a54
+
 "[ ui ]####################################################################==- 
 
 hi LineNr       guifg=#585858   guibg=#101114   gui=none
